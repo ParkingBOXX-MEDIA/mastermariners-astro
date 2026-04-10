@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Home" description="Master Mariners Benevolent Association — historical archive of San Francisco Bay's oldest sailing tradition, founded 1867.">
+
+  <div class="hero-band">
+    <h1>Master Mariners Benevolent Association</h1>
+    <p>Preserving San Francisco Bay's oldest sailing tradition since 1867</p>
+  </div>
+
+  <main>
+    <div class="home-grid">
+      <div>
+        <h1>Welcome to the Archive</h1>
+        <p>
+          The Master Mariners Benevolent Association was founded in 1867, growing out of the Boatmen's Protective Association's landmark Fourth of July race among the great coastal schooners and sailing scows of San Francisco Bay. What began as a working watermen's celebration became one of the oldest continuously-run regattas in the western United States.
+        </p>
+        <p>
+          This site serves as a historical archive of the association's events, vessels, and traditions — the annual <a href="/regatta">Master Mariners Regatta</a>, the <a href="/boatshow">Wooden Boat Show</a>, the <a href="/jessica">Jessica Cup</a>, and the many cruises and gatherings that brought together lovers of classic and traditional wooden sailcraft on the Bay.
+        </p>
+
+        <div class="card">
+          <h3>About the Annual Regatta</h3>
+          <p>Held on the Saturday of Memorial Weekend, the Master Mariners Regatta features 75–100 traditional sailing yachts and work vessels competing on San Francisco Bay racecourses. The fleet is divided into 12 classes that crisscross the Bay, with excellent viewing from the waterfront between Pier 39 and the Golden Gate Bridge.</p>
+          <p><a href="/regatta">Read more about the Regatta &rarr;</a></p>
+        </div>
+
+        <h2>Site Sections</h2>
+        <ul>
+          <li><a href="/history">History of the Master Mariners Regatta</a> — From 1867 to the present day</li>
+          <li><a href="/regatta">Annual Regatta</a> — Race details, results, and traditions</li>
+          <li><a href="/boatshow">Wooden Boat Show</a> — Classic and traditional vessel exhibitions</li>
+          <li><a href="/jessica">Jessica Cup</a> — Gaff-rigged and traditional yacht racing</li>
+          <li><a href="/members">Membership</a> — Information for traditional boat owners</li>
+          <li><a href="/sponsors">Sponsors &amp; Partners</a> — Maritime businesses supporting the regatta</li>
+          <li><a href="/links">Maritime Links</a> — Curated resources for the Bay Area sailing community</li>
+          <li><a href="/calendar">Event Calendar</a> — Annual schedule of MMBA events</li>
+          <li><a href="/drakes">Drake's Bay Cruise</a> — Annual offshore cruise</li>
+          <li><a href="/shellback">The Shellback</a> — MMBA member newsletter</li>
+        </ul>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Facts</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><strong>Founded:</strong> 1867</li>
+            <li><strong>Location:</strong> San Francisco Bay, CA</li>
+            <li><strong>Regatta:</strong> Memorial Weekend</li>
+            <li><strong>Fleet size:</strong> 75–100 vessels</li>
+            <li><strong>Vessel types:</strong> Classic &amp; wooden sailcraft</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key Venues</h3>
+          <ul style="list-style:none; padding:0; font-size:0.95rem;">
+            <li>St. Francis Yacht Club</li>
+            <li>Encinal Yacht Club</li>
+            <li>Golden Gate Yacht Club</li>
+            <li>Corinthian Yacht Club, Tiburon</li>
+            <li>Sausalito Yacht Club</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Maritime Resources</h3>
+          <ul style="list-style:none; padding:0; font-size:0.9rem;">
+            <li><a href="https://www.maritime.org" target="_blank" rel="noopener">SF Maritime National Park</a></li>
+            <li><a href="https://www.woodenboat.com" target="_blank" rel="noopener">WoodenBoat Magazine</a></li>
+            <li><a href="https://www.latitude38.com" target="_blank" rel="noopener">Latitude 38</a></li>
+            <li><a href="https://www.cwb.org" target="_blank" rel="noopener">Center for Wooden Boats</a></li>
+            <li><a href="https://www.mysticseaport.org" target="_blank" rel="noopener">Mystic Seaport Museum</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .home-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start; }
+  .home-grid aside .card { margin-bottom: 1rem; }
+  @media (max-width: 680px) { .home-grid { grid-template-columns: 1fr; } }
+</style>

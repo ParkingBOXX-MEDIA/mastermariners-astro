@@ -1,0 +1,290 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Master Mariners Benevolent Association — A historical archive of San Francisco Bay's oldest sailing tradition, founded 1867." } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Master Mariners — SF Bay Maritime Archive</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --navy: #1a3a5c;
+        --navy-dark: #0f2440;
+        --gold: #c9a227;
+        --gold-light: #e8c84a;
+        --sky: #e8f0f7;
+        --text: #2c3e50;
+        --muted: #6b7c8f;
+        --border: #d0dce8;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: Georgia, 'Times New Roman', serif;
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.7;
+      }
+
+      /* ── HEADER ── */
+      header {
+        background: var(--navy-dark);
+        border-bottom: 3px solid var(--gold);
+        padding: 0 1.5rem;
+      }
+      .header-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 0;
+        gap: 1rem;
+      }
+      .site-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+      }
+      .burgee {
+        width: 52px;
+        height: 36px;
+        flex-shrink: 0;
+      }
+      .brand-text { color: var(--white); }
+      .brand-text .name {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        color: var(--gold-light);
+        line-height: 1.2;
+      }
+      .brand-text .tagline {
+        display: block;
+        font-size: 0.75rem;
+        color: #a8bdd4;
+        font-style: italic;
+        letter-spacing: 0.05em;
+      }
+
+      /* ── NAV ── */
+      nav {
+        background: var(--navy);
+        border-bottom: 2px solid var(--gold);
+      }
+      .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      nav a {
+        color: #c8d8e8;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.7rem 1rem;
+        display: inline-block;
+        transition: background 0.15s, color 0.15s;
+        border-bottom: 3px solid transparent;
+      }
+      nav a:hover, nav a.active {
+        color: var(--gold-light);
+        border-bottom-color: var(--gold);
+        background: rgba(255,255,255,0.05);
+      }
+
+      /* ── HERO BAND ── */
+      .hero-band {
+        background: linear-gradient(135deg, var(--navy) 0%, #2a5a8c 100%);
+        color: var(--white);
+        padding: 3rem 1.5rem;
+        text-align: center;
+        border-bottom: 3px solid var(--gold);
+      }
+      .hero-band h1 {
+        font-size: 2.2rem;
+        color: var(--gold-light);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.03em;
+      }
+      .hero-band p {
+        font-style: italic;
+        color: #a8c4dc;
+        font-size: 1.05rem;
+      }
+
+      /* ── MAIN CONTENT ── */
+      main {
+        max-width: 860px;
+        margin: 2.5rem auto;
+        padding: 0 1.5rem 3rem;
+      }
+
+      h1 { font-size: 1.9rem; color: var(--navy); margin-bottom: 1rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; }
+      h2 { font-size: 1.4rem; color: var(--navy); margin: 2rem 0 0.75rem; }
+      h3 { font-size: 1.15rem; color: var(--navy-dark); margin: 1.5rem 0 0.5rem; }
+      p { margin-bottom: 1rem; }
+      ul, ol { margin: 0 0 1rem 1.5rem; }
+      li { margin-bottom: 0.35rem; }
+      a { color: #1a5c9a; text-decoration: underline; }
+      a:hover { color: var(--navy-dark); }
+
+      .card {
+        background: var(--sky);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--gold);
+        border-radius: 4px;
+        padding: 1.25rem 1.5rem;
+        margin: 1.5rem 0;
+      }
+      .card h3 { margin-top: 0; }
+
+      table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+      th { background: var(--navy); color: var(--white); padding: 0.6rem 0.8rem; text-align: left; }
+      td { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--border); }
+      tr:nth-child(even) td { background: var(--sky); }
+
+      .tag {
+        display: inline-block;
+        background: var(--navy);
+        color: var(--white);
+        font-size: 0.7rem;
+        font-family: Arial, sans-serif;
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin-left: 0.4rem;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--navy-dark);
+        border-top: 3px solid var(--gold);
+        color: #8aa8c4;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.82rem;
+        padding: 2rem 1.5rem;
+      }
+      .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      footer h4 { color: var(--gold-light); margin-bottom: 0.6rem; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
+      footer a { color: #7aaccf; text-decoration: none; }
+      footer a:hover { color: var(--gold-light); text-decoration: underline; }
+      footer ul { list-style: none; padding: 0; }
+      footer li { margin-bottom: 0.3rem; }
+      .footer-disclaimer {
+        max-width: 1100px;
+        margin: 1.5rem auto 0;
+        padding-top: 1.2rem;
+        border-top: 1px solid #2a4a6a;
+        color: #5a7a9a;
+        font-style: italic;
+        line-height: 1.5;
+      }
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0.75rem auto 0;
+        color: #3a5a7a;
+        font-size: 0.75rem;
+      }
+
+      @media (max-width: 640px) {
+        .header-inner { flex-direction: column; text-align: center; }
+        .footer-inner { grid-template-columns: 1fr; }
+        .hero-band h1 { font-size: 1.5rem; }
+        nav a { font-size: 0.75rem; padding: 0.6rem 0.65rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="site-brand">
+          <!-- Simple burgee SVG (navy/gold pennant) -->
+          <svg class="burgee" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,0 52,18 0,36" fill="#1a3a5c" stroke="#c9a227" stroke-width="1.5"/>
+            <polygon points="4,6 48,18 4,30" fill="#c9a227" opacity="0.2"/>
+            <text x="6" y="22" font-size="10" fill="#c9a227" font-family="serif" font-weight="bold">MM</text>
+          </svg>
+          <div class="brand-text">
+            <span class="name">Master Mariners</span>
+            <span class="tagline">San Francisco Bay · Est. 1867</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-inner">
+        <a href="/">Home</a>
+        <a href="/history">History</a>
+        <a href="/regatta">Regatta</a>
+        <a href="/boatshow">Boat Show</a>
+        <a href="/jessica">Jessica Cup</a>
+        <a href="/members">Membership</a>
+        <a href="/sponsors">Sponsors</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/links">Links</a>
+        <a href="/contacts">Contact</a>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/history">History of the Regatta</a></li>
+            <li><a href="/regatta">Annual Regatta</a></li>
+            <li><a href="/boatshow">Wooden Boat Show</a></li>
+            <li><a href="/jessica">Jessica Cup</a></li>
+            <li><a href="/members">Membership</a></li>
+            <li><a href="/sponsors">Sponsors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/links">Maritime Links</a></li>
+            <li><a href="/calendar">Event Calendar</a></li>
+            <li><a href="/shellback">The Shellback</a></li>
+            <li><a href="/drakes">Drake's Bay Cruise</a></li>
+            <li><a href="/contacts">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color:#7a9ab8">Archive Disclaimer:</strong> This website is maintained as a historical maritime archive and community resource documenting the legacy of the Master Mariners Benevolent Association and San Francisco Bay sailing traditions. We are not affiliated with the Master Mariners Benevolent Association (MMBA), any successor organization, or any other entity currently operating under the Master Mariners name.
+      </div>
+      <div class="footer-bottom">
+        &copy; {new Date().getFullYear()} mastermariners.org — Historical archive. All historical content belongs to its original authors.
+      </div>
+    </footer>
+  </body>
+</html>

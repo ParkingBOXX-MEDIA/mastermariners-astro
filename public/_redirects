@@ -1,0 +1,53 @@
+# Preserve all backlink equity from old .html URLs → clean URLs
+# These match all the target URLs found in SEMrush backlink report
+
+/about.html          /about          301
+/history.html        /history        301
+/regatta.html        /regatta        301
+/boatshow.html       /boatshow       301
+/jessica.html        /jessica        301
+/Jessica.html        /jessica        301
+/Jessica.htm         /jessica        301
+/jessica.htm         /jessica        301
+/members.html        /members        301
+/contacts.html       /contacts       301
+/links.html          /links          301
+/sponsors.html       /sponsors       301
+/calendar.html       /calendar       301
+/main.html           /               301
+/altindex.html       /               301
+/drakes.html         /drakes         301
+/shellbac.html       /shellback      301
+/shellback.html      /shellback      301
+/messages.html       /shellback      301
+/messbd.htm          /shellback      301
+/riverrat.html       /drakes         301
+/newyears.html       /calendar       301
+/potluck.html        /calendar       301
+/photos-1.html       /               301
+/chinacamp.htm       /calendar       301
+/discuss2.htm        /shellback      301
+/feedback.htm        /contacts       301
+/Courses.htm         /members        301
+/message_board.htm   /shellback      301
+/bring%20your%20vessel.htm  /regatta 301
+
+# MMBA subdirectory → main pages
+/MMBA/               /               301
+/MMBA                /               301
+/MMBA/about/         /about          301
+/MMBA/about          /about          301
+/MMBA/about/contacts/ /contacts      301
+/MMBA/about/membership/ /members     301
+/MMBA/calendar/      /calendar       301
+/MMBA/calendar/regatta/ /regatta     301
+/MMBA/calendar/boatshow/ /boatshow   301
+/MMBA/calendar/jessica/ /jessica     301
+/MMBA/shellback/     /shellback      301
+/MMBA/links/         /links          301
+/MMBA/sponsors/      /sponsors       301
+/MMBA/photos/        /              301
+
+# PDF downloads → relevant pages
+/PDF's/Mar%202003.pdf         /regatta  301
+/PDF's/mmba-application-dw.pdf /members 301
