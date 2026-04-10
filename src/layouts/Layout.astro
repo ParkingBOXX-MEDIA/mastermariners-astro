@@ -56,12 +56,7 @@ const { title, description = "Master Mariners Benevolent Association — A histo
         gap: 1rem;
         text-decoration: none;
       }
-      .burgee {
-        width: 52px;
-        height: 36px;
-        flex-shrink: 0;
-      }
-      .brand-text { color: var(--white); }
+.brand-text { color: var(--white); }
       .brand-text .name {
         display: block;
         font-size: 1.25rem;
@@ -134,7 +129,7 @@ const { title, description = "Master Mariners Benevolent Association — A histo
       main {
         max-width: 860px;
         margin: 2.5rem auto;
-        padding: 0 1.5rem 3rem;
+        padding: 0 2.5rem 3rem 3rem;
       }
 
       h1 { font-size: 1.9rem; color: var(--navy); margin-bottom: 1rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; }
@@ -212,6 +207,18 @@ const { title, description = "Master Mariners Benevolent Association — A histo
         font-size: 0.75rem;
       }
 
+      /* ── ARCHIVE NOTICE BAR ── */
+      .archive-notice {
+        background: #f5f0e0;
+        border-bottom: 1px solid #d4b84a;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.78rem;
+        color: #5a4a1a;
+        text-align: center;
+        padding: 0.4rem 1.5rem;
+      }
+      .archive-notice strong { color: #3a2a00; }
+
       @media (max-width: 640px) {
         .header-inner { flex-direction: column; text-align: center; }
         .footer-inner { grid-template-columns: 1fr; }
@@ -224,12 +231,6 @@ const { title, description = "Master Mariners Benevolent Association — A histo
     <header>
       <div class="header-inner">
         <a href="/" class="site-brand">
-          <!-- Simple burgee SVG (navy/gold pennant) -->
-          <svg class="burgee" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0,0 52,18 0,36" fill="#1a3a5c" stroke="#c9a227" stroke-width="1.5"/>
-            <polygon points="4,6 48,18 4,30" fill="#c9a227" opacity="0.2"/>
-            <text x="6" y="22" font-size="10" fill="#c9a227" font-family="serif" font-weight="bold">MM</text>
-          </svg>
           <div class="brand-text">
             <span class="name">Master Mariners</span>
             <span class="tagline">San Francisco Bay · Est. 1867</span>
@@ -248,10 +249,15 @@ const { title, description = "Master Mariners Benevolent Association — A histo
         <a href="/members">Membership</a>
         <a href="/sponsors">Sponsors</a>
         <a href="/calendar">Calendar</a>
+        <a href="/news">News</a>
         <a href="/links">Links</a>
         <a href="/contacts">Contact</a>
       </div>
     </nav>
+
+    <div class="archive-notice">
+      <strong>Archive Notice:</strong> This is an independent historical archive. Not affiliated with the Master Mariners Benevolent Association (MMBA) or any successor organization.
+    </div>
 
     <slot />
 

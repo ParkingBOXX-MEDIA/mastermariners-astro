@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = "Wooden Boat & Classic Yacht Regattas Worth Watching in 2025";
+const date = "April 5, 2025";
+const tag = "Regattas";
+const sponsored = false;
+---
+<Layout title={title} description="A round-up of the world's finest classic and traditional boat racing events in 2025 — from the Eggemoggin Reach to the Mediterranean.">
+
+  <div class="hero-band">
+    <h1>{title}</h1>
+    <p>Classic &amp; Traditional Sailing · {date}</p>
+  </div>
+
+  <main>
+
+    <div class="post-byline">
+      <span class="post-tag">{tag}</span>
+      {sponsored && <span class="sponsored-label">Sponsored Post</span>}
+      <span class="post-date">{date}</span>
+    </div>
+
+    <p>
+      For sailors who love timber, canvas, and gaff rigs, 2025 offers a rich calendar of classic yacht and wooden boat regattas spanning both coasts of the United States and reaching across the Atlantic. Whether you're racing or just watching from the committee boat, these events are the heartbeat of the traditional sailing community.
+    </p>
+
+    <h2>West Coast Highlights</h2>
+
+    <h3>Master Mariners Regatta — San Francisco Bay (Memorial Weekend)</h3>
+    <p>
+      The granddaddy of West Coast classic regattas. Running since 1867, the <a href="/regatta">Master Mariners Regatta</a> brings 75–100 traditional and classic wooden vessels to San Francisco Bay each Memorial Weekend. Starting at St. Francis Yacht Club with the finish at Encinal Yacht Club in Alameda, the race is the anchor event for wooden boat culture on the West Coast.
+    </p>
+
+    <h3>Wooden Boat Festival — Port Townsend, WA (October)</h3>
+    <p>
+      The largest wooden boat festival in North America draws over 300 vessels and 35,000 visitors to Port Townsend, Washington each October. The <a href="https://www.woodenboat.org/wooden-boat-festival" target="_blank" rel="noopener">Port Townsend Wooden Boat Festival</a> features demonstrations, sail training, and a waterfront show that is essential viewing for any traditional boat enthusiast.
+    </p>
+
+    <h2>East Coast Events</h2>
+
+    <h3>Eggemoggin Reach Regatta — Maine (August)</h3>
+    <p>
+      Held in the waters of Penobscot Bay, Maine, the <a href="https://www.woodenboat.com" target="_blank" rel="noopener">Eggemoggin Reach Regatta</a> is one of the most prestigious wooden boat races on the East Coast. The fleet of gaff-rigged schooners, yawls, and traditional sloops racing through the fog-threaded islands of the Maine coast makes for one of sailing's most visually stunning events.
+    </p>
+
+    <h3>Classic Yacht Regatta — Newport, RI (August)</h3>
+    <p>
+      The New York Yacht Club's Classic Yacht Regatta at Newport draws an extraordinary fleet of pre-1975 vessels to Narragansett Bay. J-Class yachts, ocean racers, and traditional cruising yachts compete in a regatta that doubles as a living museum of American yachting heritage.
+    </p>
+
+    <h2>International Calendar</h2>
+
+    <h3>Les Voiles de Saint-Tropez — France (September/October)</h3>
+    <p>
+      The Mediterranean's most glamorous classic regatta. Over 300 yachts — from massive J-Class thoroughbreds to small classic day-sailers — race in the Gulf of Saint-Tropez each autumn. The event is organized by the Société Nautique de Saint-Tropez and draws entries from across Europe and beyond.
+    </p>
+
+    <h3>Antigua Classic Yacht Regatta (April)</h3>
+    <p>
+      Each April, English Harbour in Antigua fills with some of the world's most beautiful classic and traditionally-styled yachts. The <a href="https://www.antiguaclassics.com" target="_blank" rel="noopener">Antigua Classic Yacht Regatta</a> is a five-day festival of racing, rum, and remarkable boats — a must-see event for anyone who loves classic yacht design.
+    </p>
+
+    <h2>Planning Your Season</h2>
+    <p>
+      The traditional sailing calendar rewards planning ahead. Most major regattas open entries 3–6 months in advance, and accommodations near the best venues book up early. For West Coast sailors, the Master Mariners Regatta and Port Townsend festival bookend a summer of sailing that is hard to match anywhere in the world.
+    </p>
+
+    <div class="card">
+      <h3>Stay Current</h3>
+      <p>For up-to-date regatta schedules, results, and classic boat news, visit <a href="https://www.latitude38.com" target="_blank" rel="noopener">Latitude 38</a> for Bay Area coverage and <a href="https://www.woodenboat.com" target="_blank" rel="noopener">WoodenBoat Magazine</a> for national and international events.</p>
+    </div>
+
+    <p style="margin-top:2rem"><a href="/news">&larr; Back to News</a> &nbsp;|&nbsp; <a href="/regatta">Master Mariners Regatta &rarr;</a></p>
+
+  </main>
+</Layout>
+
+<style>
+  .post-byline { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; font-family: Arial, sans-serif; font-size: 0.85rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; }
+  .post-tag { background: var(--navy); color: var(--white); padding: 0.2rem 0.6rem; border-radius: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .sponsored-label { background: #8a6a00; color: #fff; padding: 0.2rem 0.6rem; border-radius: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .post-date { color: var(--muted); }
+</style>
